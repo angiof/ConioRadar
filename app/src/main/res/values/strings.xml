@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ConioRadar</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="rank">Rank</string>
+    <string name="name">Name</string>
+    <string name="current_preze">Current Price</string>
+    <string name="coin">Coin</string>
+    <string name="prize">Prize</string>
+    <string name="title_activity_conio_radar_detail">ConioRadarDetailActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="conio_name">Conio Name</string>
+    <string name="_4383484343">4383484343</string>
+    <string name="rank_detail">Rank %1$s</string>
+</resources>
