@@ -2,3 +2,9 @@ L'app Android, sviluppata in Kotlin e XML, è progettata per tracciare l'andamen
 
 
 Per aprire l'APK, scaricalo sul tuo dispositivo Android, poi clicca sul file scaricato. Segui le istruzioni sullo schermo per installare e avviare l'app.
+
+ applicationId = "com.conio.conioradar"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
