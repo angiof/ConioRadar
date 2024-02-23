@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#19272E"
     android:fillViewport="true"
-    tools:context=".ui.fragments.ConioDetailFragmnet">
+    tools:context="com.conio.conioradar.ui.fragments.ConioDetailFragmnet">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

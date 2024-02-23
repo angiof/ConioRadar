@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.ui.home
+package com.conio.conioradar.ui.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
 import com.h2appi.conioradar.databinding.FragmentHomeBinding
-import com.h2appi.conioradar.states.CoinIntent
-import com.h2appi.conioradar.states.CoinState
-import com.h2appi.conioradar.ui.activities.ConioDetailActivity
-import com.h2appi.conioradar.ui.adapter.CoinsAdapter
+import com.conio.conioradar.states.CoinIntent
+import com.conio.conioradar.states.CoinState
+import com.conio.conioradar.ui.activities.ConioDetailActivity
+import com.conio.conioradar.ui.adapter.CoinsAdapter
 import com.h2appi.conioradar.ui.utils.UtilsBundles.COIN
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

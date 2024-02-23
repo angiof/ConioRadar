@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.ui.fragments
+package com.conio.conioradar.ui.fragments
 
 import android.content.Intent
 import android.net.Uri
@@ -19,11 +19,11 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.h2appi.conioradar.R
 import com.h2appi.conioradar.databinding.FragmentConioDetailFragmnetBinding
-import com.h2appi.conioradar.network.responses.CoinMarketData
-import com.h2appi.conioradar.network.responses.MarketChartResponse
-import com.h2appi.conioradar.states.CoinStateDetail
-import com.h2appi.conioradar.states.DetailIntent
-import com.h2appi.conioradar.ui.home.CoinDetailViewModel
+import com.conio.conioradar.network.responses.CoinMarketData
+import com.conio.conioradar.network.responses.MarketChartResponse
+import com.conio.conioradar.states.CoinStateDetail
+import com.conio.conioradar.states.DetailIntent
+import com.conio.conioradar.ui.home.CoinDetailViewModel
 import com.h2appi.conioradar.ui.utils.UtilsBundles.COIN
 import com.h2appi.conioradar.ui.utils.UtilsNetwork.DAILY
 import com.h2appi.conioradar.ui.utils.UtilsNetwork.DAYS
@@ -186,11 +186,12 @@ class ConioDetailFragmnet : Fragment() {
         leftAxis.valueFormatter = object : ValueFormatter() {
             private val daysOfWeekShort = arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
             override fun getFormattedValue(value: Float): String {
-                val calendar = Calendar.getInstance()
-                val dayIndex = (value.toInt() - 1) % 7
-                return daysOfWeekShort[dayIndex]
+                if (value < 0) return ""
+                val dayIndex = value.toInt() % 7
+                return daysOfWeekShort.getOrElse(dayIndex) { "" }
             }
         }
+
         leftAxis.textColor = ContextCompat.getColor(requireContext(), R.color.white)
 
         binding.includeLayout.chart.description.isEnabled = false

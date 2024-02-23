@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.network.responses
+package com.conio.conioradar.network.responses
 
 data class MarketChartResponse(
     val prices: List<List<Double>>,

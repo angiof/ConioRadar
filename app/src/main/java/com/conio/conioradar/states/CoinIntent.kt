@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.states
+package com.conio.conioradar.states
 
 sealed class CoinIntent {
     data object LoadTopCoins : CoinIntent()

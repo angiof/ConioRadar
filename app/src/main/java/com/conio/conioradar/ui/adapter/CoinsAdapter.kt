@@ -1,11 +1,11 @@
-package com.h2appi.conioradar.ui.adapter
+package com.conio.conioradar.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.h2appi.conioradar.databinding.ListItmesBinding
-import com.h2appi.conioradar.network.responses.CoinMarketData
+import com.conio.conioradar.network.responses.CoinMarketData
 
 class CoinsAdapter(private val onItemClicked: (CoinMarketData) -> Unit) :
     ListAdapter<CoinMarketData, CoinViewHolder>(DiffCallback) {

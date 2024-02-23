@@ -1,6 +1,6 @@
-package com.h2appi.conioradar.network.client
+package com.conio.conioradar.network.client
 
-import com.h2appi.conioradar.network.services.CoinGeckoApiService
+import com.conio.conioradar.network.services.CoinGeckoApiService
 import com.h2appi.conioradar.ui.utils.UtilsNetwork
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

@@ -1,10 +1,10 @@
-package com.h2appi.conioradar.ui.activities
+package com.conio.conioradar.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.h2appi.conioradar.ui.fragments.ConioDetailFragmnet
+import com.conio.conioradar.ui.fragments.ConioDetailFragmnet
 import com.h2appi.conioradar.R
-import com.h2appi.conioradar.network.responses.CoinMarketData
+import com.conio.conioradar.network.responses.CoinMarketData
 import com.h2appi.conioradar.ui.utils.UtilsBundles.COIN
 
 class ConioDetailActivity : AppCompatActivity() {

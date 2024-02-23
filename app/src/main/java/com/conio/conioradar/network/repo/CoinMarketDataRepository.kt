@@ -1,9 +1,9 @@
-package com.h2appi.conioradar.network.repo
+package com.conio.conioradar.network.repo
 
 import CoinDetail
-import com.h2appi.conioradar.network.responses.CoinMarketData
-import com.h2appi.conioradar.network.client.NetworkModule
-import com.h2appi.conioradar.network.responses.MarketChartResponse
+import com.conio.conioradar.network.responses.CoinMarketData
+import com.conio.conioradar.network.client.NetworkModule
+import com.conio.conioradar.network.responses.MarketChartResponse
 import com.h2appi.conioradar.ui.utils.UtilsParams.EUR
 
 class CoinRepository {

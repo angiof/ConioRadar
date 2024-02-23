@@ -1,14 +1,14 @@
-package com.h2appi.conioradar.ui.home
+package com.conio.conioradar.ui.home
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.h2appi.conioradar.network.repo.CoinRepository
-import com.h2appi.conioradar.network.repo.Resource
-import com.h2appi.conioradar.states.CoinStateDetail
-import com.h2appi.conioradar.states.DetailIntent
+import com.conio.conioradar.network.repo.CoinRepository
+import com.conio.conioradar.network.repo.Resource
+import com.conio.conioradar.states.CoinStateDetail
+import com.conio.conioradar.states.DetailIntent
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
