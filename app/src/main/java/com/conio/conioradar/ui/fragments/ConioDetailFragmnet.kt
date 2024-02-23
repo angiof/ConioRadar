@@ -66,21 +66,27 @@ class ConioDetailFragmnet : Fragment() {
 
     fun bindingUI() {
         binding.apply {
-            val format = NumberFormat.getCurrencyInstance()
-            format.currency = Currency.getInstance(UtilsParams.EUR)
+            coinMarketData?.let { coin ->
+                val format = NumberFormat.getCurrencyInstance()
+                format.currency = Currency.getInstance(EUR)
+                val currentPrice = coin.current_price.toDouble()
+                val formattedPrice =
+                    if (currentPrice != null) format.format(currentPrice) else "N/A"
+                tvCurrentPrize.text = formattedPrice
 
+                tvRank.text =
+                    getString(R.string.rank_detail, coin.market_cap_rank?.toString() ?: "")
 
+                coinName.setText(coin.name ?: "")
 
-
-            binding.tvRank.text =
-                getString(R.string.rank_detail, coinMarketData?.market_cap_rank.toString())
-            binding.coinName.setText(coinMarketData?.name.toString())
-            binding.tvSimbol.text = coinMarketData?.symbol.toString()
-            Glide.with(binding.imageView.context).load(coinMarketData?.image).circleCrop()
-                .into(binding.imageView)
-
+                tvSimbol.text = coin.symbol ?: ""
+                coin.image?.let { imageUrl ->
+                    Glide.with(imageView.context).load(imageUrl).circleCrop().into(imageView)
+                }
+            }
         }
     }
+
 
     override fun onResume() {
         super.onResume()
