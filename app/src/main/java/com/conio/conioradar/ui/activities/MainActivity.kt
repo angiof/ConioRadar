@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.ui.activities
+package com.conio.conioradar.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

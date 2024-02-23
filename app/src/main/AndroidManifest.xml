@@ -17,15 +17,12 @@
         <activity
             android:name="com.conio.conioradar.ui.activities.ConioDetailActivity"
             android:exported="false"
+            android:label="@string/title_activity_conio_radar_detail"
+            android:theme="@style/Theme.ConioRadar"
+
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".ConioRadarDetailActivity"
-            android:exported="false"
-            android:label="@string/title_activity_conio_radar_detail"
-            android:screenOrientation="sensorPortrait"
-            android:theme="@style/Theme.ConioRadar" />
-        <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.conio.conioradar.ui.activities.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="sensorPortrait">
