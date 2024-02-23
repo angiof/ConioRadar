@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.h2appi.conioradar.databinding.ListItmesBinding
+import com.conio.conioradar.databinding.ListItmesBinding
 import com.conio.conioradar.network.responses.CoinMarketData
 
 class CoinsAdapter(private val onItemClicked: (CoinMarketData) -> Unit) :

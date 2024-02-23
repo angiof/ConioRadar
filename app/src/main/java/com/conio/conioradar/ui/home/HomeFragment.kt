@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.viewModelScope
-import com.h2appi.conioradar.databinding.FragmentHomeBinding
+import com.conio.conioradar.databinding.FragmentHomeBinding
 import com.conio.conioradar.states.CoinIntent
 import com.conio.conioradar.states.CoinState
 import com.conio.conioradar.ui.activities.ConioDetailActivity
@@ -74,7 +74,7 @@ class HomeFragment : Fragment() {
                     // Mostra errore
                     Toast.makeText(
                         binding.root.context,
-                        state.message+"hai superato il limite di richieste https",
+                        state.message + "hai superato il limite di richieste https",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

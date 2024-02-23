@@ -18,9 +18,8 @@
             android:name="com.conio.conioradar.ui.activities.ConioDetailActivity"
             android:exported="false"
             android:label="@string/title_activity_conio_radar_detail"
-            android:theme="@style/Theme.ConioRadar"
-
-            android:screenOrientation="sensorPortrait" />
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/Theme.ConioRadar" />
         <activity
             android:name="com.conio.conioradar.ui.activities.MainActivity"
             android:exported="true"

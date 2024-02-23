@@ -2,7 +2,7 @@ package com.conio.conioradar.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.h2appi.conioradar.databinding.ActivityMainBinding
+import com.conio.conioradar.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

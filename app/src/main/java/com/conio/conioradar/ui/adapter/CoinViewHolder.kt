@@ -2,7 +2,7 @@ package com.conio.conioradar.ui.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.h2appi.conioradar.databinding.ListItmesBinding
+import com.conio.conioradar.databinding.ListItmesBinding
 import com.conio.conioradar.network.responses.CoinMarketData
 import com.h2appi.conioradar.ui.utils.UtilsParams
 import java.text.NumberFormat

@@ -11,14 +11,14 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
+import com.conio.conioradar.R
+import com.conio.conioradar.databinding.FragmentConioDetailFragmnetBinding
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
-import com.h2appi.conioradar.R
-import com.h2appi.conioradar.databinding.FragmentConioDetailFragmnetBinding
 import com.conio.conioradar.network.responses.CoinMarketData
 import com.conio.conioradar.network.responses.MarketChartResponse
 import com.conio.conioradar.states.CoinStateDetail

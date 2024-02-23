@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.h2appi.conioradar"
+    namespace = "com.conio.conioradar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.h2appi.conioradar"
+        applicationId = "com.conio.conioradar"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
