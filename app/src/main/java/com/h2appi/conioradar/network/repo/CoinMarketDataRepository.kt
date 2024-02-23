@@ -1,12 +1,10 @@
-package com.h2appi.conioradar.mdoels.repo
+package com.h2appi.conioradar.network.repo
 
 import CoinDetail
-import com.h2appi.conioradar.mdoels.CoinMarketData
-import com.h2appi.conioradar.mdoels.client.NetworkModule
-import com.h2appi.conioradar.mdoels.services.CoinGeckoApiService
-import com.h2appi.conioradar.mdoels.services.MarketChartResponse
+import com.h2appi.conioradar.network.responses.CoinMarketData
+import com.h2appi.conioradar.network.client.NetworkModule
+import com.h2appi.conioradar.network.responses.MarketChartResponse
 import com.h2appi.conioradar.ui.utils.UtilsParams.EUR
-import javax.inject.Inject
 
 class CoinRepository {
     private val apiService = NetworkModule.apiService
@@ -21,7 +19,14 @@ class CoinRepository {
         locale: String
     ): Resource<List<CoinMarketData>> {
         return try {
-            val response = apiService.getTopCoins(currency, order, perPage, page, sparkline, locale)
+            val response = apiService.getTopCoins(
+                currency,
+                order,
+                perPage,
+                page,
+                sparkline,
+                locale
+            )
             Resource.Success(data = response)
         } catch (e: Exception) {
             Resource.Error(message = e.message ?: "Unknown error")

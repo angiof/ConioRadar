@@ -6,7 +6,8 @@ import java.io.Serializable
 
 object UtilsNetwork {
     const val BASE_URL = "https://api.coingecko.com/api/v3/"
-
+    const val DAILY = "daily"
+    const val DAYS = "7"
 }
 
 object UtilsParams {
@@ -21,6 +22,8 @@ object UtilsBundles {
     const val COIN: String = "COIN"
 
 }
+
+
 
 inline fun <reified T : Serializable> Bundle.serializable(key: String): T? = when {
     Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> getSerializable(key, T::class.java)

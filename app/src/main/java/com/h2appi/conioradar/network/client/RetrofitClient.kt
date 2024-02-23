@@ -1,17 +1,11 @@
-package com.h2appi.conioradar.mdoels.client
+package com.h2appi.conioradar.network.client
 
-import com.h2appi.conioradar.mdoels.services.CoinGeckoApiService
+import com.h2appi.conioradar.network.services.CoinGeckoApiService
 import com.h2appi.conioradar.ui.utils.UtilsNetwork
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 object NetworkModule {
 

@@ -77,9 +77,14 @@ dependencies {
 
 
     implementation("com.google.dagger:hilt-android:2.44")
+    //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    //lottie
     implementation("com.airbnb.android:lottie:6.3.0")
+    //grafico
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    //shime
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 
 
 }

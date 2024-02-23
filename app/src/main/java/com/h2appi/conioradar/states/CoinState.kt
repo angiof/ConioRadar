@@ -1,8 +1,8 @@
 package com.h2appi.conioradar.states
 
 import CoinDetail
-import com.h2appi.conioradar.mdoels.CoinMarketData
-import com.h2appi.conioradar.mdoels.services.MarketChartResponse
+import com.h2appi.conioradar.network.responses.CoinMarketData
+import com.h2appi.conioradar.network.responses.MarketChartResponse
 
 sealed class CoinState {
     data object Loading : CoinState()

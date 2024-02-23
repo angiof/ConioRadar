@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#19272E"
     android:fillViewport="true"
-    tools:context=".ConioDetailFragmnet">
+    tools:context=".ui.fragments.ConioDetailFragmnet">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="24dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="64dp"
             android:background="@drawable/bg_text_view"
             android:clickable="false"
             android:focusable="false"
@@ -65,7 +65,8 @@
             android:text="@string/_4383484343"
             android:textColor="@color/white"
             android:textColorHighlight="@color/white"
-            android:textSize="16sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/lb_current_prize"
             app:layout_constraintTop_toBottomOf="@+id/lb_current_prize" />
 
@@ -73,7 +74,7 @@
             android:id="@+id/lb_current_prize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="18dp"
             android:text="Current prize"
             android:textColor="@color/white"
             android:textSize="14sp"
@@ -87,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="22sp"
             app:layout_constraintStart_toStartOf="@+id/tv_current_prize"
             app:layout_constraintTop_toBottomOf="@+id/tv_current_prize"
             tools:text="simbolo" />
@@ -99,35 +100,63 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/tv_simbol"
             app:layout_constraintTop_toBottomOf="@+id/tv_simbol"
             tools:text="rank" />
 
-        <TextView
-            android:id="@+id/description"
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_webPage"
             style="@style/coin_Detail"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="48dp"
-            android:textAlignment="textStart"
+            android:paddingStart="4dp"
+            android:text="@string/web"
             android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@+id/chart"
-            app:layout_constraintStart_toStartOf="@+id/chart"
-            app:layout_constraintTop_toBottomOf="@+id/chart"
-            tools:text="descrxjfnsdfgndsflgngjfdslngjdfsjgbdfsjgbjfdsgbfdsjbgjdfsbgjdfsbgdfbgkjiotn" />
+            app:drawableStartCompat="@drawable/web_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_simbol"
+            app:layout_constraintTop_toTopOf="@+id/tv_rank" />
 
 
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/chart"
-            android:layout_width="0dp"
-            android:layout_height="600dp"
-            android:layout_marginTop="44dp"
-            app:layout_constraintEnd_toEndOf="@+id/coin_name"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rank"
+            app:shimmer_duration="1000">
+
+            <include
+                android:id="@+id/inlude"
+                layout="@layout/include_layout_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </include>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <include
+            android:id="@+id/include_layout"
+            layout="@layout/include_layout_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="48dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rank">
+
+        </include>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

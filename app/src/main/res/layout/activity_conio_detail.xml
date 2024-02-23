@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ConioDetailActivity">
+    tools:context=".ui.activities.ConioDetailActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.h2appi.conioradar.ConioDetailFragmnet"
+        android:name="com.h2appi.conioradar.ui.fragments.ConioDetailFragmnet"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

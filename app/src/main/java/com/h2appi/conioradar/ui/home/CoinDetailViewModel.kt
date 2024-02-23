@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.h2appi.conioradar.mdoels.repo.CoinRepository
-import com.h2appi.conioradar.mdoels.repo.Resource
+import com.h2appi.conioradar.network.repo.CoinRepository
+import com.h2appi.conioradar.network.repo.Resource
 import com.h2appi.conioradar.states.CoinStateDetail
 import com.h2appi.conioradar.states.DetailIntent
 import kotlinx.coroutines.channels.Channel

@@ -1,4 +1,4 @@
-package com.h2appi.conioradar.mdoels
+package com.h2appi.conioradar.network.responses
 
 import java.io.Serializable
 

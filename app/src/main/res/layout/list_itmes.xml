@@ -34,6 +34,8 @@
             <TextView
                 android:id="@+id/textViewName"
                 style="@style/coin_list"
+                android:ellipsize="end"
+                android:maxLength="12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

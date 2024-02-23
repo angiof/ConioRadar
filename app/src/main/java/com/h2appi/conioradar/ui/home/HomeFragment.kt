@@ -5,22 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
 import com.h2appi.conioradar.databinding.FragmentHomeBinding
-import com.h2appi.conioradar.mdoels.repo.CoinRepository
 import com.h2appi.conioradar.states.CoinIntent
 import com.h2appi.conioradar.states.CoinState
-import com.h2appi.conioradar.ui.ConioDetailActivity
+import com.h2appi.conioradar.ui.activities.ConioDetailActivity
 import com.h2appi.conioradar.ui.adapter.CoinsAdapter
 import com.h2appi.conioradar.ui.utils.UtilsBundles.COIN
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -42,8 +36,10 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         val adapterView = CoinsAdapter { coin ->
-            Intent(binding.root.context,
-                ConioDetailActivity::class.java).apply {
+            Intent(
+                binding.root.context,
+                ConioDetailActivity::class.java
+            ).apply {
                 this.putExtra(COIN, coin)
                 startActivity(this)
             }
@@ -55,9 +51,12 @@ class HomeFragment : Fragment() {
             when (state) {
                 is CoinState.Loading -> {
                     binding.loadingAnimation.visibility = View.VISIBLE
+                    binding.mCardview.visibility = View.GONE
                 }
 
                 is CoinState.Success -> {
+                    binding.mCardview.visibility = View.VISIBLE
+
                     viewModel.viewModelScope.launch(Dispatchers.Main) {
                         withContext(Dispatchers.Main) {
                             binding.recyCoin.apply {
@@ -75,7 +74,7 @@ class HomeFragment : Fragment() {
                     // Mostra errore
                     Toast.makeText(
                         binding.root.context,
-                        state.message,
+                        state.message+"hai superato il limite di richieste https",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

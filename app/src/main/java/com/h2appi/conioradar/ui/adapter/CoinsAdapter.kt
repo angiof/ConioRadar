@@ -4,13 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.h2appi.conioradar.databinding.ListItmesBinding
-import com.h2appi.conioradar.mdoels.CoinMarketData
-import com.h2appi.conioradar.ui.utils.UtilsParams
-import java.text.NumberFormat
-import java.util.Currency
+import com.h2appi.conioradar.network.responses.CoinMarketData
 
 class CoinsAdapter(private val onItemClicked: (CoinMarketData) -> Unit) :
     ListAdapter<CoinMarketData, CoinViewHolder>(DiffCallback) {

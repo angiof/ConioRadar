@@ -4,16 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.h2appi.conioradar.mdoels.repo.CoinRepository
-import com.h2appi.conioradar.mdoels.repo.Resource
+import com.h2appi.conioradar.network.repo.CoinRepository
+import com.h2appi.conioradar.network.repo.Resource
 import com.h2appi.conioradar.states.CoinIntent
 import com.h2appi.conioradar.states.CoinState
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.consumeAsFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class CoinViewModel(
 ) : ViewModel() {

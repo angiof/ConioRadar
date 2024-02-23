@@ -1,7 +1,8 @@
-package com.h2appi.conioradar.mdoels.services
+package com.h2appi.conioradar.network.services
 
 import CoinDetail
-import com.h2appi.conioradar.mdoels.CoinMarketData
+import com.h2appi.conioradar.network.responses.CoinMarketData
+import com.h2appi.conioradar.network.responses.MarketChartResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -14,4 +14,7 @@
     <string name="conio_name">Conio Name</string>
     <string name="_4383484343">4383484343</string>
     <string name="rank_detail">Rank %1$s</string>
+    <string name="movements_in_the_last_7_days">movements in the last 7 days</string>
+    <string name="description">Description</string>
+    <string name="web">Web</string>
 </resources>
