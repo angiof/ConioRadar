@@ -27,11 +27,15 @@ import com.conio.conioradar.ui.home.CoinDetailViewModel
 import com.h2appi.conioradar.ui.utils.UtilsBundles.COIN
 import com.h2appi.conioradar.ui.utils.UtilsNetwork.DAILY
 import com.h2appi.conioradar.ui.utils.UtilsNetwork.DAYS
+import com.h2appi.conioradar.ui.utils.UtilsParams
 import com.h2appi.conioradar.ui.utils.UtilsParams.EUR
 import com.h2appi.conioradar.ui.utils.serializable
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Currency
 import java.util.Locale
+import kotlin.math.abs
 
 
 class ConioDetailFragmnet : Fragment() {
@@ -62,10 +66,15 @@ class ConioDetailFragmnet : Fragment() {
 
     fun bindingUI() {
         binding.apply {
+            val format = NumberFormat.getCurrencyInstance()
+            format.currency = Currency.getInstance(UtilsParams.EUR)
+
+
+
+
             binding.tvRank.text =
                 getString(R.string.rank_detail, coinMarketData?.market_cap_rank.toString())
             binding.coinName.setText(coinMarketData?.name.toString())
-            binding.tvCurrentPrize.text = coinMarketData?.current_price.toString()
             binding.tvSimbol.text = coinMarketData?.symbol.toString()
             Glide.with(binding.imageView.context).load(coinMarketData?.image).circleCrop()
                 .into(binding.imageView)
@@ -182,13 +191,13 @@ class ConioDetailFragmnet : Fragment() {
         xAxis.granularity = 1f
         xAxis.position = XAxis.XAxisPosition.BOTTOM
 
+
+        val daysOfWeekShort = arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
         val leftAxis = binding.includeLayout.chart.axisLeft
         leftAxis.valueFormatter = object : ValueFormatter() {
-            private val daysOfWeekShort = arrayOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
             override fun getFormattedValue(value: Float): String {
-                if (value < 0) return ""
-                val dayIndex = value.toInt() % 7
-                return daysOfWeekShort.getOrElse(dayIndex) { "" }
+                val index = (value.toInt() / 10) % daysOfWeekShort.size
+                return daysOfWeekShort[index]
             }
         }
 
@@ -205,7 +214,6 @@ class ConioDetailFragmnet : Fragment() {
 
         binding.includeLayout.chart.animateXY(2000, 2000, Easing.EaseInElastic)
     }
-
 
 
     private fun decodeUnicode(string: String): String {
