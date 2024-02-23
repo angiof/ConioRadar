@@ -72,7 +72,7 @@ class ConioDetailFragmnet : Fragment() {
                 val currentPrice = coin.current_price.toDouble()
                 val formattedPrice =
                     if (currentPrice != null) format.format(currentPrice) else "N/A"
-                tvCurrentPrize.text = formattedPrice
+                tvCurrentPrice.text = formattedPrice
 
                 tvRank.text =
                     getString(R.string.rank_detail, coin.market_cap_rank?.toString() ?: "")
@@ -175,7 +175,7 @@ class ConioDetailFragmnet : Fragment() {
             }
         }
 
-        val dataSet = LineDataSet(entries, "Prize in the last 7 days")
+        val dataSet = LineDataSet(entries, "price in the last 7 days")
         dataSet.color = ContextCompat.getColor(requireContext(), R.color.red)
         dataSet.valueTextColor = ContextCompat.getColor(requireContext(), R.color.white)
         dataSet.setDrawCircles(true)

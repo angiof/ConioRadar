@@ -57,7 +57,7 @@
 
 
         <TextView
-            android:id="@+id/tv_current_prize"
+            android:id="@+id/tv_current_price"
             style="@style/coin_Detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -67,15 +67,15 @@
             android:textColorHighlight="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/lb_current_prize"
-            app:layout_constraintTop_toBottomOf="@+id/lb_current_prize" />
+            app:layout_constraintStart_toStartOf="@+id/lb_current_price"
+            app:layout_constraintTop_toBottomOf="@+id/lb_current_price" />
 
         <TextView
-            android:id="@+id/lb_current_prize"
+            android:id="@+id/lb_current_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:text="Current prize"
+            android:text="Current price"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -89,8 +89,8 @@
             android:layout_marginTop="8dp"
             android:textColor="@color/white"
             android:textSize="22sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_current_prize"
-            app:layout_constraintTop_toBottomOf="@+id/tv_current_prize"
+            app:layout_constraintStart_toStartOf="@+id/tv_current_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_price"
             tools:text="simbolo" />
 
         <TextView
